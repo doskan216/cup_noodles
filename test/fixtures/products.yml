@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  company: MyString
+  date: 2015-12-14 04:43:18
+  description: MyText
+  large_category: MyString
+  small_category: MyString
+  remaining_count: 1
+  price: 9.99
+  image_url: MyString
+
+two:
+  name: MyString
+  company: MyString
+  date: 2015-12-14 04:43:18
+  description: MyText
+  large_category: MyString
+  small_category: MyString
+  remaining_count: 1
+  price: 9.99
+  image_url: MyString

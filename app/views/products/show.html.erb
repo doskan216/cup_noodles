@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @product.company %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @product.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Large category:</strong>
+  <%= @product.large_category %>
+</p>
+
+<p>
+  <strong>Small category:</strong>
+  <%= @product.small_category %>
+</p>
+
+<p>
+  <strong>Remaining count:</strong>
+  <%= @product.remaining_count %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @product.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
