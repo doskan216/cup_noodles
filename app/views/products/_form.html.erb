@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%= f.date_select :date, start_year: 1971, end_year: Time.now.year%>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -29,11 +29,11 @@
   </div>
   <div class="field">
     <%= f.label :large_category %><br>
-    <%= f.text_field :large_category %>
+    <%= f.select( :large_category , options_for_select(%w{ 豚骨 醤油 味噌 塩 焼きそば うどん そば パスタ その他 }, '豚骨')) %>
   </div>
   <div class="field">
     <%= f.label :small_category %><br>
-    <%= f.text_field :small_category %>
+<%= f.select( :small_category , options_for_select(%w{ 太麺 普通 細麺 }, '普通')) %>
   </div>
   <div class="field">
     <%= f.label :remaining_count %><br>

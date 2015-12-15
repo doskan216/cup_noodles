@@ -33,12 +33,18 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+    <span class="mdl-layout-title">ジャンル別で表示</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+      <%= link_to '全ての商品', root_path, class: "mdl-navigation__link" %>
+      <%= link_to '豚骨', root_path(large_category: "豚骨"), class: "mdl-navigation__link" %>
+      <%= link_to '醤油', root_path(large_category: "醤油"), class: "mdl-navigation__link" %>
+      <%= link_to '味噌', root_path(large_category: "味噌"), class: "mdl-navigation__link" %>
+      <%= link_to '塩', root_path(large_category: "塩"), class: "mdl-navigation__link" %>
+      <%= link_to '焼きそば', root_path(large_category: "焼きそば"), class: "mdl-navigation__link" %>
+      <%= link_to 'うどん', root_path(large_category: "うどん"), class: "mdl-navigation__link" %>
+      <%= link_to 'そば', root_path(large_category: "そば"), class: "mdl-navigation__link" %>
+      <%= link_to 'パスタ', root_path(large_category: "パスタ"), class: "mdl-navigation__link" %>
+      <%= link_to 'その他', root_path(large_category: "その他"), class: "mdl-navigation__link" %>
     </nav>
   </div>
   <main class="mdl-layout__content">
