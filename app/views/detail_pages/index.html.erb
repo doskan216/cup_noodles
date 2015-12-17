@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Detail Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detail_pages.each do |detail_page| %>
+      <tr>
+        <td><%= detail_page.name %></td>
+        <td><%= link_to 'Show', detail_page_path %></td>
+        <td><%= link_to 'Edit', edit_detail_page_path(detail_page) %></td>
+        <td><%= link_to 'Destroy', detail_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail page', new_detail_page_path %>

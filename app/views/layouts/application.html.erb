@@ -18,7 +18,7 @@
             mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-layout-spacer"><h2>テスト麺のサイト</h2></div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
         <label class="mdl-button mdl-js-button mdl-button--icon"
@@ -33,7 +33,7 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">ジャンル別で表示</span>
+    <span class="mdl-layout-title">ジャンル別商品一覧</span>
     <nav class="mdl-navigation">
       <%= link_to '全ての商品', root_path, class: "mdl-navigation__link" %>
       <%= link_to '豚骨', root_path(large_category: "豚骨"), class: "mdl-navigation__link" %>
@@ -50,8 +50,7 @@
   <main class="mdl-layout__content">
     <div class="page-content"><%= yield %></div>
 
-
-<footer class="mdl-mini-footer">
+    <footer class="mdl-mini-footer">
   <div class="mdl-mini-footer__left-section">
     <div class="mdl-logo">Title</div>
     <ul class="mdl-mini-footer__link-list">
@@ -61,10 +60,11 @@
   </div>
 </footer>
 
-
   </main>
 
 </div>
+
+
 
 
 </body>

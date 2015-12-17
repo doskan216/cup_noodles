@@ -28,9 +28,11 @@
         <%= product.description %>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          カートに入れる
-        </a>
+      <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <%= button_to("商品詳細ページへ", detail_page_path(product.id), method: :get, class:"mdl-button mdl-js-button mdl-button--primary") %>
+        </div>
+        </div>
       </div>
     </div>
   </div>

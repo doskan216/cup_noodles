@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :detail_pages
   get 'store/index'
 
   resources :products

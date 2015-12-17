@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<h2>商品詳細:<%= @detail_page.name %></h2>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <div id="datail">
+      <ul>
+        <li>製造元:<%= @detail_page.company %>
+          <li>発売日:<%= @detail_page.date %></li>
+          <li>商品説明:<%= @detail_page.description %></li>
+          <li>スープ・麺の種類:<%= @detail_page.large_category %></li>
+          <li>麺の太さ:<%= @detail_page.small_category %></li>
+          <li>価格:<%= @detail_page.price %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <div id="cartbutton">
+        <%= button_to("カートに入れる", store_index_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
+      </div>
+        <%= button_to("商品一覧に戻る", store_index_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
+    </div>
+    <div id="detailimg">
+      <img src="<%= image_url("#{@detail_page.image_url}")%>">
+    </div>
+
+
+
+  <%#= link_to 'Edit', edit_detail_page_path(@detail_page) %>
+ <%#= link_to 'Back', detail_pages_path %>
