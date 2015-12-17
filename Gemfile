@@ -58,14 +58,14 @@ gem 'material_design_lite-rails'
 
 gem 'seed_dump'
 
-gem 'activeadmin', github: 'activeadmin'
-gem 'devise'
+# gem 'activeadmin', github: 'activeadmin'
+# gem 'devise'
 
 
-group :development, :test do
-  gem 'sqlite3'
-end
-group :production do
- gem 'pg'
- gem 'rails_12factor'
-end
+# group :development, :test do
+#   gem 'sqlite3'
+# end
+# group :production do
+#  gem 'pg'
+#  gem 'rails_12factor'
+# end
