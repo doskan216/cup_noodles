@@ -31,6 +31,7 @@
       <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--12-col">
         <%= button_to("商品詳細ページへ", detail_page_path(product.id), method: :get, class:"mdl-button mdl-js-button mdl-button--primary") %>
+        <%= button_to 'カートに入れる', line_items_path(product_id: product) %>
         </div>
         </div>
       </div>
