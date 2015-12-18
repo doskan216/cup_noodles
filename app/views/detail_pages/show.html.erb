@@ -16,7 +16,7 @@
     </div>
     <div class="mdl-cell mdl-cell--6-col">
       <div id="cartbutton">
-        <%= button_to("カートに入れる", store_index_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
+        <%= button_to "カートに入れる", line_items_path(product_id: @detail_page), method: :post, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" %>
       </div>
         <%= button_to("商品一覧に戻る", store_index_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
     </div>
@@ -24,7 +24,9 @@
       <img src="<%= image_url("#{@detail_page.image_url}")%>">
     </div>
 
+    <!-- カートボタンサンプル -->
+    <%#= button_to 'カートに入れる', line_items_path(product_id: @detail_page) %>
 
 
   <%#= link_to 'Edit', edit_detail_page_path(@detail_page) %>
- <%#= link_to 'Back', detail_pages_path %>
+  <%#= link_to 'Back', detail_pages_path %>
