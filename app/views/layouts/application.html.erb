@@ -34,6 +34,7 @@
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">ジャンル別商品一覧</span>
+    <p id="time"><%= @time.strftime('%Y年%m月%d日 %H時%M分') %></p>
     <nav class="mdl-navigation">
       <%= link_to '全ての商品', root_path, class: "mdl-navigation__link" %>
       <%= link_to '豚骨', root_path(large_category: "豚骨"), class: "mdl-navigation__link" %>

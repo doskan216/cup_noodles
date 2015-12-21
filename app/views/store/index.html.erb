@@ -29,7 +29,8 @@
         <h2 class="mdl-card__title-text"><%= product.name %></h2>
       </div>
       <div class="mdl-card__supporting-text">
-        <%= product.description %>
+        <p>価格:<%= number_to_currency(product.price) %><br>
+        商品説明:<%= product.description %></p>
       </div>
       <div class="mdl-card__actions mdl-card--border">
       <div class="mdl-grid">

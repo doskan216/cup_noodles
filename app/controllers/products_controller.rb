@@ -71,4 +71,11 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :company, :date, :description, :large_category, :small_category, :remaining_count, :price, :image_url)
     end
+
+    def who_bought
+      @product = Product.find(params[:id])
+      respond_to do |format|
+        format.atom
+      end
+    end
 end

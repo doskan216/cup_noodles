@@ -10,7 +10,7 @@
           <li>商品説明:<%= @detail_page.description %></li>
           <li>スープ・麺の種類:<%= @detail_page.large_category %></li>
           <li>麺の太さ:<%= @detail_page.small_category %></li>
-          <li>価格:<%= @detail_page.price %></li>
+          <li>価格:<%= number_to_currency(@detail_page.price) %></li>
         </ul>
       </div>
     </div>

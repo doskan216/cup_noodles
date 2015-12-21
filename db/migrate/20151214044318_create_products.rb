@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :large_category
       t.string :small_category
       t.integer :remaining_count
-      t.decimal :price
+      t.decimal :price, precision:0,scale:0
       t.string :image_url
 
       t.timestamps null: false
