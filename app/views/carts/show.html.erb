@@ -2,17 +2,32 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h2>テスト麺カート</h2>
-
-<ul>
+<div class="cart_title">カート</div>
+<table>
   <% @cart.line_items.each do |item| %>
-  <li><%= item.quantity %> &times; <%= item.product.name %></li>
+  <tr>
+  <td><img src="<%= image_url("#{item.product.image_url}")%>" width="150px" height="150px"></td>
+  <td><%= item.quantity %> &times;</td>
+  <td><%= item.product.name %></td>
+  <td class="total_price"><%= number_to_currency(item.total_price) %></td>
+  </tr>
   <% end %>
-</ul>
 
-<%= button_to 'カートを空にする', @cart, method: :delete,
-    confirm: '本当によいですか?' %>
+  <tr class="total_line">
+    <td colspan="2">合計</td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
 
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+      <%= button_to("買い物を続ける", store_index_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <%= button_to('カートを空にする', @cart, method: :delete, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
+    </div>
+</div>
 
   <%#= link_to 'Edit', edit_cart_path(@cart) %>
   <%#= link_to 'Back', carts_path %>
