@@ -27,6 +27,9 @@
     <div class="mdl-cell mdl-cell--4-col">
       <%= button_to('カートを空にする', @cart, method: :delete, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
     </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <%= button_to("チェックアウト", new_order_path, method: :get, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect") %>
+    </div>
 </div>
 
   <%#= link_to 'Edit', edit_cart_path(@cart) %>

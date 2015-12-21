@@ -1,0 +1,46 @@
+.depot_form {
+  fieldset{
+    margin-top: 0.5em;
+    background: #DDDDDD;
+
+    legend {
+      color: white;
+      background: #000000;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+      margin-bottom: 3em;
+      font-size: 120%;
+    }
+  }
+
+  #formname {
+    background: #000000;
+    color: white;
+    font-size: 120%;
+    width: 8em;
+    text-align: center;
+    margin-left: 0.5em;
+  }
+
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+div.actions {
+  margin-top: 50px;
+}
+
+    br {
+      display: none
+    }
+  }
+}
