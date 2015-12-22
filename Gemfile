@@ -58,8 +58,10 @@ gem 'material_design_lite-rails'
 
 gem 'seed_dump'
 
-# gem 'activeadmin', github: 'activeadmin'
-# gem 'devise'
+gem 'will_paginate'
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 
 # group :development, :test do
