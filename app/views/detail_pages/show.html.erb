@@ -12,7 +12,7 @@
     <div id="datail">
       <ul>
         <li>製造元:<%= @detail_page.company %>
-          <li>発売日:<%= @detail_page.date %></li>
+          <li>発売日:<%= @detail_page.date.strftime('%Y年%m月%d日') %></li>
           <li>商品説明:<%= @detail_page.description %></li>
           <li>スープ・麺の種類:<%= @detail_page.large_category %></li>
           <li>麺の太さ:<%= @detail_page.small_category %></li>
