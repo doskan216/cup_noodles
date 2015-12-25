@@ -2,14 +2,20 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<div class="cart_title">カート</div>
+<div class="mdl-grid" id="topgrid">
+  <div class="mdl-cell mdl-cell--12-col"><h2 id="toph2">商品カート</h2></div>
+</div>
 <table>
+  <thead>
+    <tr><th>商品画像</th><th>個数</th><th>商品名</th><th>価格</th><th>商品取り消し</th></tr>
+  </thead>
   <% @cart.line_items.each do |item| %>
   <tr>
   <td><img src="<%= image_url("#{item.product.image_url}")%>" width="150px" height="150px"></td>
-  <td><%= item.quantity %> &times;</td>
+  <td><%= item.quantity %></td>
   <td><%= item.product.name %></td>
   <td class="total_price"><%= number_to_currency(item.total_price) %></td>
+  <td> <%= button_to("商品を取り消す", item, method: :delete,) %></td>
   </tr>
   <% end %>
 

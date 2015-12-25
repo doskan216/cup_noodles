@@ -1,8 +1,14 @@
+<main id="detailmain">
+<% if notice %>
 <p id="notice"><%= notice %></p>
-<h2>商品詳細:<%= @detail_page.name %></h2>
-
+<% end %>
+<div class="mdl-grid" id="topgrid">
+<div class="mdl-cell mdl-cell--12-col"id="topname">
+<h2 id="detailh2">商品詳細:<%= @detail_page.name %></h2>
+</div>
+</div>
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
+  <div class="mdl-cell mdl-cell--6-col" >
     <div id="datail">
       <ul>
         <li>製造元:<%= @detail_page.company %>
@@ -14,7 +20,7 @@
         </ul>
       </div>
     </div>
-    <div class="mdl-cell mdl-cell--6-col">
+    <div class="mdl-cell mdl-cell--6-col" id="button">
       <div id="cartbutton">
         <%= button_to "カートに入れる", line_items_path(product_id: @detail_page), method: :post, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" %>
       </div>
@@ -23,7 +29,7 @@
     <div id="detailimg">
       <img src="<%= image_url("#{@detail_page.image_url}")%>">
     </div>
-
+</main>
     <!-- カートボタンサンプル -->
     <%#= button_to 'カートに入れる', line_items_path(product_id: @detail_page) %>
 

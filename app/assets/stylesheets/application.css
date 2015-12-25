@@ -18,3 +18,18 @@
 #time {
   margin-left: 2em;
 }
+
+#center {
+  text-align: center;
+  font-size: 120%;
+  background-color: #666666;
+}
+
+.mdl-navigation {
+  background-color: #666666;
+  color: white;
+}
+
+.mdl-navigation__link{
+  background-color: white;
+}
